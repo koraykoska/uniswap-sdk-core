@@ -38,7 +38,7 @@ describe('CurrencyAmount', () => {
   })
   it('token amount cannot exceed max uint256', () => {
     expect(() =>
-      CurrencyAmount.fromRawAmount(new Token(1, ADDRESS_ONE, 18), JSBI.add(MaxUint256, JSBI.BigInt(1)))
+      CurrencyAmount.fromRawAmount(new Token(1, ADDRESS_ONE, 18), JSBI.add(MaxUint256, JSBI.BigInt(1))),
     ).toThrow('AMOUNT')
   })
   it('token amount quotient cannot exceed max uint256', () => {
@@ -46,15 +46,15 @@ describe('CurrencyAmount', () => {
       CurrencyAmount.fromFractionalAmount(
         new Token(1, ADDRESS_ONE, 18),
         JSBI.add(JSBI.multiply(MaxUint256, JSBI.BigInt(2)), JSBI.BigInt(2)),
-        JSBI.BigInt(2)
-      )
+        JSBI.BigInt(2),
+      ),
     ).toThrow('AMOUNT')
   })
   it('token amount numerator can be gt. uint256 if denominator is gt. 1', () => {
     const amount = CurrencyAmount.fromFractionalAmount(
       new Token(1, ADDRESS_ONE, 18),
       JSBI.add(MaxUint256, JSBI.BigInt(2)),
-      2
+      2,
     )
     expect(amount.numerator).toEqual(JSBI.add(JSBI.BigInt(2), MaxUint256))
   })

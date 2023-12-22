@@ -13,8 +13,8 @@ describe('#computePriceImpact', () => {
       computePriceImpact(
         new Price(Ether.onChain(1), t0, 10, 100),
         CurrencyAmount.fromRawAmount(Ether.onChain(1), 10),
-        CurrencyAmount.fromRawAmount(t0, 100)
-      )
+        CurrencyAmount.fromRawAmount(t0, 100),
+      ),
     ).toEqual(new Percent(0, 10000))
   })
   it('is correct for half output', () => {
@@ -22,8 +22,8 @@ describe('#computePriceImpact', () => {
       computePriceImpact(
         new Price(t0, t1, 10, 100),
         CurrencyAmount.fromRawAmount(t0, 10),
-        CurrencyAmount.fromRawAmount(t1, 50)
-      )
+        CurrencyAmount.fromRawAmount(t1, 50),
+      ),
     ).toEqual(new Percent(5000, 10000))
   })
   it('is negative for more output', () => {
@@ -31,8 +31,8 @@ describe('#computePriceImpact', () => {
       computePriceImpact(
         new Price(t0, t1, 10, 100),
         CurrencyAmount.fromRawAmount(t0, 10),
-        CurrencyAmount.fromRawAmount(t1, 200)
-      )
+        CurrencyAmount.fromRawAmount(t1, 200),
+      ),
     ).toEqual(new Percent(-10000, 10000))
   })
 })

@@ -75,7 +75,7 @@ export class Fraction {
     }
     return new Fraction(
       this._numerator * otherParsed._denominator + otherParsed._numerator * this._denominator,
-      this._denominator * otherParsed._denominator
+      this._denominator * otherParsed._denominator,
     )
   }
 
@@ -86,7 +86,7 @@ export class Fraction {
     }
     return new Fraction(
       this._numerator * otherParsed._denominator - otherParsed._numerator * this._denominator,
-      this._denominator * otherParsed._denominator
+      this._denominator * otherParsed._denominator,
     )
   }
 
@@ -118,7 +118,7 @@ export class Fraction {
   public toSignificant(
     significantDigits: number,
     format: object = { groupSeparator: '' },
-    rounding: Rounding = Rounding.ROUND_HALF_UP
+    rounding: Rounding = Rounding.ROUND_HALF_UP,
   ): string {
     invariant(Number.isInteger(significantDigits), `${significantDigits} is not an integer.`)
     invariant(significantDigits > 0, `${significantDigits} is not positive.`)
@@ -133,7 +133,7 @@ export class Fraction {
   public toFixed(
     decimalPlaces: number,
     format: object = { groupSeparator: '' },
-    rounding: Rounding = Rounding.ROUND_HALF_UP
+    rounding: Rounding = Rounding.ROUND_HALF_UP,
   ): string {
     invariant(Number.isInteger(decimalPlaces), `${decimalPlaces} is not an integer.`)
     invariant(decimalPlaces >= 0, `${decimalPlaces} is negative.`)

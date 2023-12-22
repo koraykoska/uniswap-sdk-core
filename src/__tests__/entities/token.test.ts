@@ -9,7 +9,7 @@ describe('Token', () => {
   describe('#constructor', () => {
     it('fails with invalid address', () => {
       expect(() => new Token(3, '0xhello00000000000000000000000000000000002', 18).address).toThrow(
-        '0xhello00000000000000000000000000000000002 is not a valid address'
+        '0xhello00000000000000000000000000000000002 is not a valid address',
       )
     })
     it('fails with negative decimals', () => {
@@ -23,10 +23,10 @@ describe('Token', () => {
     })
     it('fails with negative FOT fees', () => {
       expect(
-        () => new Token(3, ADDRESS_ONE, 18, undefined, undefined, undefined, BigNumber.from(-1), undefined)
+        () => new Token(3, ADDRESS_ONE, 18, undefined, undefined, undefined, BigNumber.from(-1), undefined),
       ).toThrow('NON-NEGATIVE FOT FEES')
       expect(
-        () => new Token(3, ADDRESS_ONE, 18, undefined, undefined, undefined, undefined, BigNumber.from(-1))
+        () => new Token(3, ADDRESS_ONE, 18, undefined, undefined, undefined, undefined, BigNumber.from(-1)),
       ).toThrow('NON-NEGATIVE FOT FEES')
     })
   })
@@ -40,7 +40,7 @@ describe('Token', () => {
     it('fails with invalid address', () => {
       expect(
         () =>
-          new Token(3, '0xhello00000000000000000000000000000000002', 18, undefined, undefined, bypassChecksum).address
+          new Token(3, '0xhello00000000000000000000000000000000002', 18, undefined, undefined, bypassChecksum).address,
       ).toThrow('0xhello00000000000000000000000000000000002 is not a valid address')
     })
     it('fails with negative decimals', () => {

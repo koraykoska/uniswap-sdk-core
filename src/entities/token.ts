@@ -42,7 +42,7 @@ export class Token extends BaseCurrency {
     name?: string,
     bypassChecksum?: boolean,
     buyFeeBps?: BigNumber,
-    sellFeeBps?: BigNumber
+    sellFeeBps?: BigNumber,
   ) {
     super(chainId, decimals, symbol, name)
     if (bypassChecksum) {
