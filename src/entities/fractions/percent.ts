@@ -1,5 +1,5 @@
-import { BigintIsh, Rounding } from '../../constants'
-import { Fraction } from './fraction'
+import { BigintIsh, Rounding } from '../../constants.js'
+import { Fraction } from './fraction.js'
 
 const ONE_HUNDRED = new Fraction(BigInt(100))
 
