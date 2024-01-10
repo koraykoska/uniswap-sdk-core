@@ -1,8 +1,8 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import invariant from 'tiny-invariant'
-import { checkValidAddress, validateAndParseAddress } from '../utils/validateAndParseAddress'
-import { BaseCurrency } from './baseCurrency'
-import { Currency } from './currency'
+import { checkValidAddress, validateAndParseAddress } from '../utils/validateAndParseAddress.js'
+import { BaseCurrency } from './baseCurrency.js'
+import { Currency } from './currency.js'
 
 /**
  * Represents an ERC20 token with a unique address and some metadata.

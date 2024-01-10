@@ -1,4 +1,4 @@
-import { Token } from './token'
+import { Token } from './token.js'
 
 /**
  * Known WETH9 implementation addresses, used in our implementation of Ether#wrapped

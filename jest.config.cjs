@@ -21,5 +21,6 @@ module.exports = {
   // for absolute imports
   moduleNameMapper: {
     'src/(.*)': '<rootDir>/src/$1',
+    '(.+)\\.js$': ['$1.js', '$1'],
   },
 }

@@ -1,4 +1,4 @@
-import { BaseCurrency } from './baseCurrency'
+import { BaseCurrency } from './baseCurrency.js'
 
 /**
  * Represents the native currency of the chain on which it resides, e.g.

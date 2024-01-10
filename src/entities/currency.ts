@@ -1,4 +1,4 @@
-import { NativeCurrency } from './nativeCurrency'
-import { Token } from './token'
+import { NativeCurrency } from './nativeCurrency.js'
+import { Token } from './token.js'
 
 export type Currency = NativeCurrency | Token

@@ -1,4 +1,4 @@
-export { computePriceImpact } from './computePriceImpact'
-export { sortedInsert } from './sortedInsert'
-export { sqrt } from './sqrt'
-export { validateAndParseAddress } from './validateAndParseAddress'
+export { computePriceImpact } from './computePriceImpact.js'
+export { sortedInsert } from './sortedInsert.js'
+export { sqrt } from './sqrt.js'
+export { validateAndParseAddress } from './validateAndParseAddress.js'

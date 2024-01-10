@@ -1,4 +1,4 @@
-export { CurrencyAmount } from './currencyAmount'
-export { Fraction } from './fraction'
-export { Percent } from './percent'
-export { Price } from './price'
+export { CurrencyAmount } from './currencyAmount.js'
+export { Fraction } from './fraction.js'
+export { Percent } from './percent.js'
+export { Price } from './price.js'

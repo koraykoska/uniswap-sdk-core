@@ -1,4 +1,4 @@
-import { ChainId, SUPPORTED_CHAINS, SupportedChainsType } from './chains'
+import { ChainId, SUPPORTED_CHAINS, SupportedChainsType } from './chains.js'
 
 type AddressMap = { [chainId: number]: string }
 
